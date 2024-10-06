@@ -1,6 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class TopController : MonoBehaviour
@@ -26,6 +24,9 @@ public class TopController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(controller.isGrounded);
+    
+       
         GatherInput();
         Look();
     }
@@ -49,6 +50,6 @@ public class TopController : MonoBehaviour
     void Move()
     {
         Vector3 frwd = this.transform.forward;
-        controller.Move(frwd * speed * Time.deltaTime * MoveDirection.magnitude);
+        controller.SimpleMove(frwd * speed * MoveDirection.magnitude);
     }
 }

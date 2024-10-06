@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     private Camera mainCam;
     private NavMeshAgent agent;
     private Vector3 target;
+    [SerializeField]
     private GameObject player;
     [SerializeField]
     private EnemyType type;
